@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Bus Ticket</title>
+    <!-- daisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="w-10/12 mx-auto my-5">
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              >
+                <li><a>Item 1</a></li>
+                <li>
+                  <a>Parent</a>
+                  <ul class="p-2">
+                    <li><a>Submenu 1</a></li>
+                    <li><a>Submenu 2</a></li>
+                  </ul>
+                </li>
+                <li><a>Item 3</a></li>
+              </ul>
+            </div>
+            <a class="btn btn-ghost text-xl">daisyUI</a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a>Item 1</a></li>
+              <li>
+                <details>
+                  <summary>Parent</summary>
+                  <ul class="p-2">
+                    <li><a>Submenu 1</a></li>
+                    <li><a>Submenu 2</a></li>
+                  </ul>
+                </details>
+              </li>
+              <li><a>Item 3</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a class="btn">Button</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="bg-white relative mb-32">
+      <div
+          class="hero w-10/12 mx-auto h-[550px] rounded-3xl"
+          style="background-image: url(./images/banner.png)"
+        >
+          <div class="hero-overlay bg-opacity-60 bg-white -z-10"></div>
+          <div class="hero-content text-neutral-content text-center">
+            <div class="max-w-screen-lg">
+              <h1 class="mb-5 text-5xl font-extrabold">
+                End-to-End Travel with <br />
+                <span class="text-green-700">P Paribahan</span>
+              </h1>
+              <p class="mb-5 text-white">
+                Yes, you can run unit tests and view the results directly within
+                the app. The integrated testing features allow for a streamlined
+                .
+              </p>
+              <button
+                class="btn bg-green-700 m-5 text-white border-r-cyan-400 hover:text-black"
+              >
+                Buy Ticket
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="hidden md:flex justify-center items-center gap-14 lg:absolute bottom-5 right-96"
+      >
+        <div
+          class="stats bg-white rounded-2xl text-primary-content border-b-4 border-green-700"
+        >
+          <div class="stat flex">
+            <img src="./images/people.png" alt="" />
+            <div>
+              <h3 class="text-3xl font-bold text-black">500K+</h3>
+              <p class="text-gray-700">Registered User</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="stats bg-white rounded-2xl text-primary-content border-b-4 border-green-700"
+        >
+          <div class="stat flex">
+            <img src="./images/ticket-cupon.png" alt="" />
+            <div>
+              <h3 class="text-3xl font-bold text-black">1.7 lac</h3>
+              <p class="text-gray-700">Ticket Sold</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="stats bg-white rounded-2xl text-primary-content border-b-4 border-green-700"
+        >
+          <div class="stat flex">
+            <img src="./images/stoppage.png" alt="" />
+            <div>
+              <h3 class="text-3xl font-bold text-black">880K+</h3>
+              <p class="text-gray-700">Rental Partners</p>
+            </div>
+          </div>
+        </div>
+        
+    </header>
+    <main>
+        <!-- offer section -->
+        <div class="w-10/12 mx-auto  md:flex justify-around items-center ">
+            <div class="stats bg-yellow-400 text-primary-content grid grid-cols-3 p-5 relative overflow-hidden">
+                <div class="stat border-r-2 border-dashed border-white col-span-2">
+                  <h1 class=" text-3xl font-bold text-black">15% OFF</h1>
+                  <h4 class="text-xl font-bold text-black">on your next purchase</h4>
+                  <p class="text-gray-700">use by January 2024</p>
+                </div>
+                
+                <div class="w-20 h-20 bg-white rounded-full shadow-lg absolute -top-14 right-[135px]"></div>
+                <div class="w-20 h-20 bg-white rounded-full shadow-lg absolute -bottom-14 right-[135px] "></div>
+                
+
+            
+              
+                <div class="stat col-span-1">
+                 <h2 class=" text-3xl font-bold text-black">NEW15</h2>
+                 <p class="text-gray-700">Coupon Code</p>
+                  
+                </div>
+              </div>
+              <br><br>
+              <div class="stats bg-green-400 text-primary-content grid grid-cols-3 p-5 relative overflow-hidden">
+                <div class="stat border-r-2 border-dashed border-white col-span-2">
+                  <h1 class=" text-3xl font-bold text-black">20% OFF</h1>
+                  <h4 class="text-xl font-bold text-black">on your next purchase</h4>
+                  <p class="text-gray-700">use by January 2024</p>
+                </div>
+
+                
+                <div class="w-20 h-20 bg-white rounded-full shadow-lg absolute -top-14 right-[135px]"></div>
+                <div class="w-20 h-20 bg-white rounded-full shadow-lg absolute -bottom-14 right-[135px]"></div>
+
+            
+              
+                <div class="stat col-span-1">
+                 <h2 class=" text-3xl font-bold text-black">NEW20</h2>
+                 <p class="text-gray-700">Coupon Code</p>
+                  
+                </div>
+              </div>
+        </div>
+
+        <!-- main section -->
+        <section class="mt-44  border-y-4 border-green-600 rounded-t-[80px] rounded-b-[80px] bg-slate-200">
+
+          <div class=" w-10/12 mx-auto text-center gap-2 py-32 pb-20">
+            <h2 class=" text-black font-bold text-3xl mb-5">P. H. Paribahan </h2>
+            <p class="text-gray-700 text-xl">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+          </div>
+
+          <div class="w-10/12 mx-auto bg-white p-10 rounded-3xl grid grid-cols-5 relative">
+            <div class=" col-span-4 border-r-2 border-dashed border-green-400 pr-6">
+              
+              
+              <div class="flex justify-between items-center gap-5">
+                <div class="flex justify-center items-center gap-2">
+                  <img src="./images/bus-logo.png" alt="">
+                <div>
+                  <h2 class="text-black text-2xl">GreenLine Paribahan</h2>
+                  <p class="text-gray-700 text-xl">Coach-009-WEB ! AC_Business</p>
+                </div>
+  
+                </div>
+                <div class="bg-green-400 rounded-2xl flex p-5 mr-5">
+                  <img src="./images/seat-green-filled.png" alt="">
+                  <p > 40 seat available</p>
+                </div>
+              </div>
+
+              <div class="mt-20" >
+                <form class="mr-10" action="" method="post">
+                  <select placeholder="Route" class="input input-bordered input-accent w-full mb-2 " name="" id="" >
+                    <option value="Dhaka - Sylhet">Dhaka - Sylhet</option>
+                  </select>
+                  <select placeholder="Departure Time" class="input input-bordered input-accent w-full mb-4 " name="" id="" >
+                    <option value="9:00">9:00 PM</option>
+                  </select>
+                  
+                  <div class="flex justify-center items-center">
+                    <div class="bg-green-400 rounded-2xl flex p-5 mr-5">
+                      <p class="text-gray-700 text-lg"> Boarding Point - Laxmipur </p>
+                    </div>
+                    <div class="bg-green-400 rounded-2xl flex p-5 mr-5">
+                      <p class="text-gray-700 text-lg"> Dropping Point - Bogura </p>
+                    </div>
+                    <div class="bg-green-400 rounded-2xl flex p-5 mr-5">
+                      <p class="text-gray-700 text-lg"> Est. Time - 11 Hour </p>
+                    </div>
+                  </div>
+                  
+                </form>
+              </div>
+            </div>
+
+            
+            <div class="w-20 h-20 bg-slate-200 rounded-full  absolute -top-10 right-60"></div>
+            <div class="w-20 h-20 bg-slate-200 rounded-full  absolute -bottom-10 right-[235px] "></div>
+
+            <div class="col-span-1 flex flex-col justify-center items-center ">
+              <img src="./images/fare.png" alt="">
+              <h1 class="text-black text-4xl"> 500 tk</h1>
+              <p class="text-gray-700 text-2xl"> Per Seat</p>
+
+            </div>
+          </div>
+
+          <div class="w-10/12 mx-auto bg-white p-10 rounded-3xl grid grid-cols-5  my-20">
+            <!-- seat section -->
+
+            <!-- seat content -->
+            <div class=" col-span-3 border-r-2 border-dashed border-gray-400    pr-6">
+              <div class="border-dashed border-gray-400  border-b-2 pb-5 mb-5">
+               <h2>select your seat</h2>
+              </div>
+ 
+              
+              <div class="flex  justify-between gap-2 mb-5 pb-5 border-dashed border-gray-400  border-b-2">
+               <div class="flex">
+                 <img src="./images/seat-gray.png" alt="">
+                 <p>available</p>
+               </div>
+               <div class="flex">
+                 <img src="./images/seat-green.png" alt="">
+                 <p class="text-green-500">selected</p>
+               </div>
+             </div>
+
+             <!-- seat content -->
+             
+             <!-- select seat -->
+             <div class="grid grid-cols-6 gap-2 text-center">
+               <div class="col-span-5"></div>
+               <div class="col-span-1"> 
+                 <img src="./images/stoppage.png" alt="">
+               </div>
+               <div class="col-span-1 text-center rounded-lg px-5 py-2">A</div>
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">A1</button>
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">A2</button>
+               <div class="col-span-1 text-center  py-2 px"></div> 
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">A3</button>
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">A4</button>
+               <div class="col-span-1 text-center rounded-lg  py-2">B</div>
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">B1</button>
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">B2</button>
+               <div class="col-span-1 text-center  py-2"></div> 
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">B3</button>
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">B4</button>
+               <div class="col-span-1 text-center rounded-lg  py-2">C</div>
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">C1</button>
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">C2</button>
+               <div class="col-span-1 text-center  py-2"></div> 
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">C3</button>
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">C4</button>
+               <div class="col-span-1 text-center rounded-lg  py-2">D</div>
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">D1</button>
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">D2</button>
+               <div class="col-span-1 text-center  py-2"></div> 
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">D3</button>
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">D4</button>
+               <div class="col-span-1 text-center rounded-lg  py-2">E</div>
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">E1</button>
+               <button onclick="btnHandler(this)"class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">E2</button>
+               <div class="col-span-1 text-center  py-2"></div> 
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">E3</button>
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">E4</button>
+               <div class="col-span-1 text-center rounded-lg  py-2">F</div>
+               <button onclick="btnHandler(this)"class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">F1</button>
+               <button onclick="btnHandler(this)"class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">F2</button>
+               <div class="col-span-1 text-center  py-2"></div> 
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">F3</button>
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">F4</button>
+               <div class="col-span-1 text-center rounded-lg  py-2">G</div>
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">G1</button>
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">G2</button>
+               <div class="col-span-1 text-center  py-2"></div> 
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">G3</button>
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">G4</button>
+               <div class="col-span-1 text-center rounded-lg  py-2">H</div>
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">H1</button>
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">H2</button>
+               <div class="col-span-1 text-center  py-2"></div> 
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">H3</button>
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">H4</button>
+               <div class="col-span-1 text-center rounded-lg  py-2">I</div>
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">I1</button>
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">I2</button>
+               <div class="col-span-1 text-center  py-2"></div> 
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">I3</button>
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">I4</button>
+               <div class="col-span-1 text-center rounded-lg  py-2">J</div>
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">J1</button>
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">J2</button>
+               <div class="col-span-1 text-center  py-2"></div> 
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">J3</button>
+               <button onclick="btnHandler(this)" class="col-span-1 text-center  bg-slate-200 rounded-lg  py-2 hover:bg-gray-600 hover:text-green-500">J4</button>
+ 
+             </div>
+             <!-- select seat -->
+             
+             <!-- seat section -->
+
+           </div>
+
+            <!-- payment section -->
+
+            <div class=" col-span-2 pl-6">
+              <div class="border-dashed border-gray-400  border-b-2 pb-5 mb-5">
+                <h2>select your seat</h2>
+              </div>
+
+              <div class="p-5  rounded-2xl bg-slate-200 text-center">
+                <div class="flex justify-between">
+                  <div class="flex gap-1">
+                    <p class="text-black">seat
+                      <div id="ticket-count" class="w-6 h-5 bg-green-500 rounded-full text-white text-center text-sm">0</div>
+                    </p>
+                  </div>
+                  <p class="text-black">class</p>
+                  <p class="text-black">Price</p>
+                </div>
+                <hr class=" border-gray-400  border-b-2 mt-2">
+
+                <div id="ticket-container">
+                  <!-- ticket content -->
+                  
+                </div>
+
+                <hr class=" border-gray-400  border-b-2 mt-2">
+
+                <div class="flex justify-between mt-5">                    
+                  <p class="text-black font-bold">Total Price</p>                  
+                  <p id="total-ticket-price" class="text-black font-bold">0</p>
+                </div>
+
+                <div class="mt-5">
+                  <input id="coupon" class="p-5 w-9/12  rounded-xl" type="text" placeholder="Have any cupon?">
+                  <button onclick="couponCheck()" class="bg-green-600 p-5 rounded-xl text-white"> Apply</button>
+                </div>
+
+                <div class="flex justify-between mt-5">                    
+                  <p class="text-black font-bold">Grand Price</p>                  
+                  <p id="grand-ticket-price" class="text-black font-bold">0</p>
+                </div>
+
+              <form class="mx-auto w-full" action="" method="post" >
+                <label for="Passanger name ">Passanger name*</label>
+                <input type="text" name="" id="" class="input input-bordered input-accent w-full mb-2">
+                <label for="Passanger name">Phone number*</label>
+                <input type="text" name="" id="" class="input input-bordered input-accent w-full mb-2">
+                <label for="Passanger name">Email*</label>
+                <input type="Email" name="" id="" class="input input-bordered input-accent w-full mb-2">          
+              </form>
+
+              <button class="bg-green-600 p-5 rounded-xl text-white w-full mt-5"> Next</button>
+
+              <div class="mt-5 gap-5">
+                <a class="mr-5 underline" href="#">Terms and Conditions</a> 
+              <a class="underline" href="#">Cancelation Policy</a>
+              </div>
+              
+
+            </div>
+
+            <!-- payment section -->
+          </div>
+          <br>
+        </section>
+
+
+        <!-- main section -->
+    </main>
+    <footer class="bg-black"> 
+      <div class="w-10/12 p-10 mx-auto flex justify-between my-10 border-dashed border-gray-400  border-b-2">
+        <div class="">
+          <h4 class="text-white text-4xl font-extrabold mb-5">P Ticket</h4>
+          <p class=" text-gray-300 text-2xl">P-Ticket is a digital platform to make your <br> daily commuting better.</p>
+        </div>
+        <div>
+          <p class="text-gray-300 mb-4">Download Our App</p>
+          <button class=" flex items-center text-center border-2 border-slate-300 rounded-lg px-5 py-2">
+            <img src="./images/playstore.png" alt="">
+            <div>
+              <p class="text-xl text-white">get it on <br>
+              <span class="text-lg">Google Play</span></p>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class=" w-10/12 mx-auto my-10 flex justify-between items-center">
+        <p class="text-xl text-white">@all rights reserved, P-Ticket services limited.2024</p>
+        <div class=" text-xl mt-5 my-10 gap-5 text-gray-300">
+          <a class="mr-5 underline" href="#">Terms and Conditions</a> 
+          <a class="mr-5 underline" href="#">Return & refund policy</a>
+          <a class="underline" href="#">Privacy Policy</a>
+        </div>
+
+      </div>
+    </footer>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
