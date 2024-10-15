@@ -17,7 +17,15 @@ function btnHandler(event) {
     if (seatToRemove) {
       ticketContainer.removeChild(seatToRemove);
     }
-    array.pop(event.innerText);
+    // array.pop(event.innerText);
+
+    let index = array.indexOf(event.innerText);
+
+    if (index !== -1) {
+      array.splice(index, 1);
+    }
+
+    console.log(array);
     event.removeAttribute("data-selected");
     event.classList.remove("bg-gray-600", "text-green-500");
     event.classList.add("bg-slate-200");
